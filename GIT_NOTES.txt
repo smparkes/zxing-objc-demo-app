@@ -1,0 +1,7 @@
+GITHUB NOTES - June 5, 2011
+
+For whatever reason - the ZXingApp xcode project "ZXingMac" did not get sent along with the other files in the "ZxingApp" folder. 
+
+The implication is that all of this GIT activity will get to be performed yet again as it still is not a correctly configured repository. 
+
+Apologies - the Mgmt. 

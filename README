@@ -1,0 +1,26 @@
+# FILE: README - github.com:notarysojac/macos.git
+# DATE: June 5, 2011
+# ===============================================
+
+This GIT repository contains the source and projects for the macos folder materials in the ZXing project. 
+
+There are three MacOS projects in Xcode4 format:
+   ZXingApp
+   ZXingFW
+   ZXingLib
+   
+...plus there is a folder with the Objective-C source code wrappers which encapsulate and reference source code contained in the ZXing cpp/core/src files:
+ 
+   ZXingObjc
+   
+The ZXingApp project contains two subordinate projects which can and will build ZXing.framework and libZXing.a.  Those projects - and their source code - may all be edited by way of the Xcode4 main IDE window presented with the ZXingAPP project.  It is also possible to individually open and edit the projects contained in the ZXingFW and ZXingLib folders.
+
+The ZXingApp project builds ZXingMac.app which, as a standalone app, contains the ZXing.framework and, as a result, does not require the ZXing.framework to be copied into any of the User's 'Frameworks' folders.  
+
+NOTE: A weblink for a simple and clear explanation about how to accomplish the "built-in Framework" functionality in your MacOS application: http://www.dribin.org/dave/blog/archives/2009/11/15/rpath/ 
+
+KNOWN ISSUES: 
+It is possible that some of the controls, such as popup menu and checkboxes, in the main window will not be re-drawn when the course of the video feed to the ZXing engine is changed.  Clicking in the area of the controls can cause them to be drawn.  This is a bug which will be eliminated.
+
+# ===============================================
+# eof
