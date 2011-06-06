@@ -19,6 +19,8 @@
 			<string>NSButton</string>
 			<string>NSTextFieldCell</string>
 			<string>NSBox</string>
+			<string>NSImageView</string>
+			<string>NSImageCell</string>
 			<string>NSCustomObject</string>
 			<string>NSView</string>
 			<string>NSWindowTemplate</string>
@@ -358,9 +360,9 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">271</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{100, 500}, {800, 560}}</string>
+				<string key="NSWindowRect">{{100, 500}, {823, 584}}</string>
 				<int key="NSWTFlags">1954022400</int>
-				<string key="NSWindowTitle">ZXingMacOSX</string>
+				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
 				<string key="NSWindowContentMaxSize">{800, 560}</string>
@@ -383,7 +385,7 @@
 										<object class="NSView" id="541932555">
 											<reference key="NSNextResponder" ref="972731673"/>
 											<int key="NSvFlags">4108</int>
-											<string key="NSFrame">{{18, 27}, {480, 324}}</string>
+											<string key="NSFrame">{{18, 14}, {480, 324}}</string>
 											<reference key="NSSuperview" ref="972731673"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="108448153"/>
@@ -397,7 +399,7 @@
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								</object>
 							</object>
-							<string key="NSFrame">{{16, 179}, {518, 380}}</string>
+							<string key="NSFrame">{{26, 177}, {518, 380}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="972731673"/>
@@ -406,10 +408,10 @@
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">ZXing Capture Preview</string>
-								<object class="NSFont" key="NSSupport" id="1026101791">
-									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">13</double>
+								<string type="base64-UTF8" key="NSContents">ICA</string>
+								<object class="NSFont" key="NSSupport" id="866074274">
+									<string key="NSName">TektonPro-BoldExt</string>
+									<double key="NSSize">16</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="NSColor" key="NSBackgroundColor" id="778826809">
@@ -477,7 +479,7 @@
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								</object>
 							</object>
-							<string key="NSFrame">{{16, 22}, {625, 108}}</string>
+							<string key="NSFrame">{{26, 20}, {625, 108}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1071302328"/>
@@ -486,8 +488,8 @@
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">ZXing QRcode Results</string>
-								<reference key="NSSupport" ref="1026101791"/>
+								<string key="NSContents">QRcode Results</string>
+								<reference key="NSSupport" ref="866074274"/>
 								<reference key="NSBackgroundColor" ref="778826809"/>
 								<object class="NSColor" key="NSTextColor">
 									<int key="NSColorSpace">3</int>
@@ -527,7 +529,7 @@
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								</object>
 							</object>
-							<string key="NSFrame">{{546, 376}, {237, 183}}</string>
+							<string key="NSFrame">{{556, 374}, {237, 183}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1024819061"/>
@@ -536,8 +538,8 @@
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">ZXing 'Binary' Intermediate</string>
-								<reference key="NSSupport" ref="1026101791"/>
+								<string key="NSContents">Binary Intermediate</string>
+								<reference key="NSSupport" ref="866074274"/>
 								<reference key="NSBackgroundColor" ref="778826809"/>
 								<object class="NSColor" key="NSTextColor">
 									<int key="NSColorSpace">3</int>
@@ -577,7 +579,7 @@
 									<int key="NSViewLayerContentsRedrawPolicy">2</int>
 								</object>
 							</object>
-							<string key="NSFrame">{{546, 179}, {239, 184}}</string>
+							<string key="NSFrame">{{556, 177}, {239, 184}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="393814671"/>
@@ -586,8 +588,8 @@
 							<object class="NSTextFieldCell" key="NSTitleCell">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
-								<string key="NSContents">ZXing 'Luminance' Intermediate </string>
-								<reference key="NSSupport" ref="1026101791"/>
+								<string key="NSContents">Luminance Intermediate </string>
+								<reference key="NSSupport" ref="866074274"/>
 								<reference key="NSBackgroundColor" ref="778826809"/>
 								<object class="NSColor" key="NSTextColor">
 									<int key="NSColorSpace">3</int>
@@ -603,7 +605,7 @@
 						<object class="NSPopUpButton" id="583723298">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{289, 139}, {245, 26}}</string>
+							<string key="NSFrame">{{27, 137}, {266, 26}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="1017995394"/>
@@ -672,7 +674,7 @@
 						<object class="NSButton" id="174426524">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{24, 144}, {113, 18}}</string>
+							<string key="NSFrame">{{313, 142}, {113, 18}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="390087788"/>
@@ -682,7 +684,11 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents">Video Mirror</string>
-								<reference key="NSSupport" ref="191712136"/>
+								<object class="NSFont" key="NSSupport" id="650157610">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">12</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="NSControlView" ref="174426524"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">2</int>
@@ -702,7 +708,7 @@
 						<object class="NSButton" id="390087788">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{147, 144}, {133, 18}}</string>
+							<string key="NSFrame">{{430, 142}, {126, 18}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="583723298"/>
@@ -712,7 +718,7 @@
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents">Sound on Result</string>
-								<reference key="NSSupport" ref="191712136"/>
+								<reference key="NSSupport" ref="650157610"/>
 								<reference key="NSControlView" ref="390087788"/>
 								<int key="NSButtonFlags">1211912703</int>
 								<int key="NSButtonFlags2">2</int>
@@ -727,7 +733,7 @@
 						<object class="NSButton" id="1017995394">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{546, 135}, {240, 32}}</string>
+							<string key="NSFrame">{{556, 133}, {240, 32}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="784506406"/>
@@ -750,7 +756,7 @@
 						<object class="NSButton" id="501070234">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{664, 22}, {104, 87}}</string>
+							<string key="NSFrame">{{671, 23}, {104, 87}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -774,8 +780,42 @@
 								<int key="NSPeriodicInterval">25</int>
 							</object>
 						</object>
+						<object class="NSImageView" id="1051785900">
+							<reference key="NSNextResponder" ref="439893737"/>
+							<int key="NSvFlags">268</int>
+							<object class="NSMutableSet" key="NSDragTypes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSArray" key="set.sortedObjects">
+									<bool key="EncodedWithXMLCoder">YES</bool>
+									<string>Apple PDF pasteboard type</string>
+									<string>Apple PICT pasteboard type</string>
+									<string>Apple PNG pasteboard type</string>
+									<string>NSFilenamesPboardType</string>
+									<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
+									<string>NeXT TIFF v4.0 pasteboard type</string>
+								</object>
+							</object>
+							<string key="NSFrame">{{136, 544}, {318, 48}}</string>
+							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSWindow"/>
+							<int key="NSViewLayerContentsRedrawPolicy">2</int>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSImageCell" key="NSCell" id="316403229">
+								<int key="NSCellFlags">130560</int>
+								<int key="NSCellFlags2">33554432</int>
+								<object class="NSCustomResource" key="NSContents">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">ZXingType</string>
+								</object>
+								<int key="NSAlign">0</int>
+								<int key="NSScale">0</int>
+								<int key="NSStyle">0</int>
+								<bool key="NSAnimates">NO</bool>
+							</object>
+							<bool key="NSEditable">YES</bool>
+						</object>
 					</object>
-					<string key="NSFrame">{{7, 11}, {800, 560}}</string>
+					<string key="NSFrame">{{7, 11}, {823, 584}}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="516862674"/>
@@ -1329,11 +1369,12 @@
 							<reference ref="108448153"/>
 							<reference ref="898126244"/>
 							<reference ref="1017995394"/>
-							<reference ref="390087788"/>
-							<reference ref="583723298"/>
-							<reference ref="174426524"/>
 							<reference ref="501070234"/>
 							<reference ref="784506406"/>
+							<reference ref="583723298"/>
+							<reference ref="174426524"/>
+							<reference ref="390087788"/>
+							<reference ref="1051785900"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 						<string key="objectName">mainView</string>
@@ -1540,6 +1581,20 @@
 						<reference key="object" ref="193549721"/>
 						<reference key="parent" ref="885269279"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">664</int>
+						<reference key="object" ref="1051785900"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="316403229"/>
+						</object>
+						<reference key="parent" ref="439893737"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">665</int>
+						<reference key="object" ref="316403229"/>
+						<reference key="parent" ref="1051785900"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1632,6 +1687,8 @@
 					<string>657.IBPluginDependency</string>
 					<string>661.IBPluginDependency</string>
 					<string>662.IBPluginDependency</string>
+					<string>664.IBPluginDependency</string>
+					<string>665.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>72.ImportedFromIB2</string>
 					<string>73.IBPluginDependency</string>
@@ -1774,6 +1831,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
@@ -1811,7 +1870,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">663</int>
+			<int key="maxID">665</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1886,6 +1945,189 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ZXingMacAppDelegate</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>captureButtonPressed:</string>
+							<string>configureForVideoSource:</string>
+							<string>mirrorCheckboxPressed:</string>
+							<string>selectedVideoSourceChange:</string>
+							<string>soundsCheckboxPressed:</string>
+							<string>windowWillClose:</string>
+							<string>zxingImagePressed:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>id</string>
+							<string>NSNotification</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>captureButtonPressed:</string>
+							<string>configureForVideoSource:</string>
+							<string>mirrorCheckboxPressed:</string>
+							<string>selectedVideoSourceChange:</string>
+							<string>soundsCheckboxPressed:</string>
+							<string>windowWillClose:</string>
+							<string>zxingImagePressed:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">captureButtonPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">configureForVideoSource:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">mirrorCheckboxPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">selectedVideoSourceChange:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">soundsCheckboxPressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">windowWillClose:</string>
+								<string key="candidateClassName">NSNotification</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">zxingImagePressed:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>appLogoButton</string>
+							<string>binaryBox</string>
+							<string>binaryView</string>
+							<string>captureButton</string>
+							<string>luminanceBox</string>
+							<string>luminanceView</string>
+							<string>mainView</string>
+							<string>mainWindow</string>
+							<string>mirrorVideoCheckbox</string>
+							<string>previewBox</string>
+							<string>previewView</string>
+							<string>resultsText</string>
+							<string>soundsCheckbox</string>
+							<string>sourceSelectPopupMenu</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>NSButton</string>
+							<string>NSBox</string>
+							<string>NSView</string>
+							<string>NSButton</string>
+							<string>NSBox</string>
+							<string>NSView</string>
+							<string>NSView</string>
+							<string>NSWindow</string>
+							<string>NSButton</string>
+							<string>NSBox</string>
+							<string>NSView</string>
+							<string>NSTextField</string>
+							<string>NSButton</string>
+							<string>NSPopUpButton</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>appLogoButton</string>
+							<string>binaryBox</string>
+							<string>binaryView</string>
+							<string>captureButton</string>
+							<string>luminanceBox</string>
+							<string>luminanceView</string>
+							<string>mainView</string>
+							<string>mainWindow</string>
+							<string>mirrorVideoCheckbox</string>
+							<string>previewBox</string>
+							<string>previewView</string>
+							<string>resultsText</string>
+							<string>soundsCheckbox</string>
+							<string>sourceSelectPopupMenu</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">appLogoButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">binaryBox</string>
+								<string key="candidateClassName">NSBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">binaryView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">captureButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">luminanceBox</string>
+								<string key="candidateClassName">NSBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">luminanceView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mainView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mainWindow</string>
+								<string key="candidateClassName">NSWindow</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mirrorVideoCheckbox</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">previewBox</string>
+								<string key="candidateClassName">NSBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">previewView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">resultsText</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">soundsCheckbox</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">sourceSelectPopupMenu</string>
+								<string key="candidateClassName">NSPopUpButton</string>
+							</object>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ZXingMacAppDelegate.h</string>
@@ -1912,6 +2154,7 @@
 				<string>NSMenuCheckmark</string>
 				<string>NSMenuMixedState</string>
 				<string>NSSwitch</string>
+				<string>ZXingType</string>
 				<string>zxinglogo</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
@@ -1919,6 +2162,7 @@
 				<string>{9, 8}</string>
 				<string>{7, 2}</string>
 				<string>{15, 15}</string>
+				<string>{300, 33}</string>
 				<string>{104, 84}</string>
 			</object>
 		</object>

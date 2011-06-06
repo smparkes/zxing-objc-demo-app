@@ -20,7 +20,7 @@
 @synthesize userdefaults;
 @synthesize zxingEngine;
 @synthesize captureLayer;
-@synthesize resultsLayer;
+//@synthesize resultsLayer;
 @synthesize captureDevice;
 @synthesize mirrorVideoMode;
 @synthesize resultsText;
@@ -118,11 +118,7 @@
 				}
 				
 			[self performVideoSourceScan];
-			//[self setupVideoSourceMenuForName:nil];
-			
-			//[mirrorVideoCheckbox		setEnabled:NO];
-			//[soundsCheckbox			setEnabled:NO];		
-			//[sourceSelectPopupMenu	setEnabled:NO];
+
 			[captureButton			setTitle:kCANCELTITLE];
 			
 			if((nil == captureDevice) && (nil != allVideoDevices) && (0 < [allVideoDevices count]))
@@ -280,8 +276,15 @@
 	NSLog(@"ZXSourceSelect::selectedVideoSourceChange - ENTER");
 	#endif
 	
-	NSPopUpButton* videoselections = (NSPopUpButton*) sender;
+	[self performSelectorOnMainThread:@selector(configureForVideoSource:) withObject:sender waitUntilDone:NO];
+	}
 	
+// ------------------------------------------------------------------------------------------
+
+- (IBAction) configureForVideoSource:(id) sender
+	{
+	NSPopUpButton* videoselections = (id) sender;
+
 	if(nil != videoselections)
 		{
 		NSInteger numberOfItems = [videoselections numberOfItems];
@@ -373,16 +376,17 @@
 	if(NO == [zxingEngine isRunning])	
 		{
 		// Remove the RESULTS layer if it's there... 
-		if(nil != resultsLayer)
-			{
-			[resultsLayer removeFromSuperlayer];
-			[resultsLayer release];
-			resultsLayer = nil;
-			}
+		//if(nil != resultsLayer)
+		//	{
+		//	[resultsLayer removeFromSuperlayer];
+		//	[resultsLayer release];
+		//	resultsLayer = nil;
+		//	}
 			
-		//[mirrorVideoCheckbox		setEnabled:NO];
-		//[soundsCheckbox			setEnabled:NO];		// this is the GO button for the capture activity
-		//[sourceSelectPopupMenu	setEnabled:NO];
+		#ifdef __DEBUG_LOGGING__
+		NSLog(@"ZXingMacAppDelegate::captureButtonPressed - zxingEngine was not running");
+		#endif
+
 		
 		[captureButton			setTitle:kCANCELTITLE];
 		[resultsText			setStringValue:kBLANKSTR];	// NSTextField
@@ -395,10 +399,6 @@
 		{			
 		[zxingEngine stop];
 		[captureButton			setTitle:kCAPTURETITLE];
-		
-		//[mirrorVideoCheckbox		setEnabled:YES];
-		//[soundsCheckbox			setEnabled:YES];		// this is the GO button for the capture activity
-		//[sourceSelectPopupMenu	setEnabled:YES];
 		}
 	}
 	
@@ -625,10 +625,6 @@
 						
 			[zxingEngine stop];							// stop and wait for user to want to "Capture" again
 			
-			//[soundsCheckbox			setEnabled:YES];	
-			//[captureButton			setEnabled:YES];	// this is the GO button for the capture activity
-			//[mirrorVideoCheckbox		setEnabled:YES];	
-			//[sourceSelectPopupMenu	setEnabled:YES];	
 			[captureButton			setTitle:kCAPTURETITLE];		
 			
 			#ifdef __DEBUG_LOGGING__
@@ -668,7 +664,7 @@
 	#ifdef __DEBUG_LOGGING_CAPTURE__
 	NSLog(@"ZXingMacAppDelegate::manageOverlay - ENTER");
 	#endif
-	
+	/*
 	#ifdef __SHOW_OVERLAY_LAYER__
 	if(nil != resultsLayer)
 		{
@@ -687,7 +683,7 @@
 	[resultsLayer plotPointsOnLayer:inResult]; 
 	[captureLayer addSublayer:resultsLayer];	
 	#endif
-	
+	*/
 	
 	}
 

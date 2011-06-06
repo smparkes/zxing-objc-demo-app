@@ -10,7 +10,7 @@
 #import "ZXingMacDefs.h"
 #import <ZXingObjc/ZXCapture.h>
 #import <ZXingObjc/ZXCaptureDelegate.h>
-#import <ZXingObjc/ZXOverlay.h>
+//#import <ZXingObjc/ZXOverlay.h>
 
 // --------------------------------------------------------------------
 
@@ -35,7 +35,7 @@
 
 				ZXCapture*				zxingEngine;
 				CALayer*				captureLayer;
-				ZXOverlay*				resultsLayer;
+				//ZXOverlay*				resultsLayer;
 				QTCaptureDevice*		captureDevice;
 				NSUserDefaults*			userdefaults;
 				NSMutableArray*			allVideoDevices;
@@ -69,7 +69,7 @@
 
 @property (nonatomic, retain)			NSUserDefaults*		userdefaults;
 @property (nonatomic, retain)			ZXCapture*			zxingEngine;
-@property (nonatomic, retain)			ZXOverlay*			resultsLayer;
+//@property (nonatomic, retain)			ZXOverlay*			resultsLayer;
 
 @property (nonatomic, retain)			CALayer*			captureLayer;
 @property (nonatomic, retain)			QTCaptureDevice*	captureDevice;
@@ -88,7 +88,7 @@
 - (IBAction)	mirrorCheckboxPressed:(id) sender;
 - (IBAction)	soundsCheckboxPressed:(id) sender;
 - (IBAction)	zxingImagePressed:(id) sender;
-
+- (IBAction)	configureForVideoSource:(id) sender;
 - (void)		awakeFromNib;
 
 - (void)		applicationDidFinishLaunching:(NSNotification *)notification;
@@ -99,6 +99,7 @@
 - (ZXCapture*)	createZXcapture;
 
 - (void)		performVideoSourceScan;
+
 - (CGRect)		shrinkContentRect:(NSRect) inRect;
 - (void)		manageOverlay:(ZXResult*) inResult;
 - (void)		presentOverlayForPoints:(CGPoint)point0

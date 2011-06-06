@@ -168,6 +168,7 @@
 	
 	[self stop];
 	
+	
 	if(nil != captureDevice) // QTCaptureDevice
 		{
 		BOOL isOpen = [captureDevice isOpen];
@@ -176,7 +177,7 @@
 			[captureDevice close];
 			}
 		}
-		
+	
 	[self setCaptureDevice:		inDevice];
 	[self setCaptureDelegate:	inDelegate];
 	[self setMirrorVideo:		inMirrormode];
@@ -252,7 +253,6 @@
 			
 			if(nil != captureInput)
 				{
-				// [captureInput retain]; // ???
 				[captureSession addInput:captureInput ZXQT(error:&error)];
 				
 				#if(TARGET_OS_MAC)
@@ -286,14 +286,12 @@
 
 - (ZXCaptureSession*) captureSession 
 	{
-	//#if(!TARGET_OS_MAC)
 	if (nil == captureSession) 
 		{
 		captureSession = [[ZXCaptureSession alloc] init];
 		ZXAV({captureSession.sessionPreset = AVCaptureSessionPresetMedium;});
 		[self replaceInput];
 		}
-	//#endif
 	return(captureSession);
 	}
 
@@ -329,8 +327,9 @@
 							if(nil != thedevice)
 								{
 								#ifdef __DEBUG_LOGGING__
-								NSLog(@"ZXCapture::stop - remove input for device [%@]",[thedevice localizedDisplayName]);
-			#endif
+								NSLog(@"ZXCapture::stop - remove input for device [%@]",
+									  [thedevice localizedDisplayName]);
+								#endif
 								[captureSession removeInput:theinput];
 								}
 							}
@@ -420,7 +419,6 @@
 - (void) start 
 	{
 	// NSLog(@"start %@ %d %@ %@", self.captureSession, zxRunning, captureOutput, captureDelegate);
-
 	if (YES == hard_stop) 
 		{
 		return;
@@ -430,7 +428,7 @@
 	  {
 	  // for side effects
 	  #if(!TARGET_OS_MAC)
-	  [self captureOutput];	// MAcOSX API already has this working
+	  [self captureOutput];	// MacOSX API already has this working
 	  #endif
 	  }
     
@@ -440,12 +438,6 @@
 		} 
 	else 
 		{
-		static int i = 0;
-		if (++i == -2) 
-			{
-			abort();
-			}
-			
 		if(NO == [self.captureSession isRunning])
 			{
 			NSLog(@"ZXCapture::start - call start running");
@@ -580,8 +572,13 @@
 			 });
 		}
 		
-	ZXQT({ transform.a = ((YES == mirrorVideo) ? -1: 1); });
-	[captureLayer setAffineTransform:transform];
+	int nowvalue = transform.a;
+	int newvalue = ((YES == mirrorVideo) ? -1: 1); // ZXQT({ transform.a = ((YES == mirrorVideo) ? -1: 1)  });
+	if(nowvalue != newvalue)
+		{
+		transform.a = newvalue;
+		[captureLayer setAffineTransform:transform];
+		}
 		
 	return(captureLayer);
 	}
@@ -718,47 +715,47 @@
 
   // NSLog(@"received frame");
 
-  ZXAV(CVImageBufferRef videoFrame = CMSampleBufferGetImageBuffer(sampleBuffer));
+	ZXAV(CVImageBufferRef videoFrame = CMSampleBufferGetImageBuffer(sampleBuffer));
 
   // NSLog(@"%d %d", CVPixelBufferGetWidth(videoFrame), CVPixelBufferGetHeight(videoFrame));
   // NSLog(@"captureDelegate %@", captureDelegate);
 
-  ZXQT({
-	  if ((0 == reported_width) || (0 == reported_height)) 
-		  {
-		  NSSize size = [[[[captureInput.device.formatDescriptions objectAtIndex:0]
+	ZXQT({
+		if ((0 == reported_width) || (0 == reported_height)) 
+			{
+			NSSize size = [[[[captureInput.device.formatDescriptions objectAtIndex:0]
 						   formatDescriptionAttributes] objectForKey:@"videoEncodedPixelsSize"] sizeValue];
-		  width  = size.width;
-		  height = size.height;
-		  [self performSelectorOnMainThread:@selector(setOutputAttributes) withObject:nil waitUntilDone:NO];
-		  reported_width  = size.width;
-		  reported_height = size.height;
-		  [captureDelegate captureSize:self width:[NSNumber numberWithFloat:size.width]
-										   height:[NSNumber numberWithFloat:size.height]];
-		  }
-	  });
+			width  = size.width;
+			height = size.height;
+			[self performSelectorOnMainThread:@selector(setOutputAttributes) withObject:nil waitUntilDone:NO];
+			reported_width  = size.width;
+			reported_height = size.height;
+			[captureDelegate captureSize:self width:[NSNumber numberWithFloat:size.width]
+										     height:[NSNumber numberWithFloat:size.height]];
+			}
+		});
 
-	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];  // *** MOVED BACK TO HERE - 6-6-11 LD
 
 	#if(!TARGET_OS_EMBEDDED)
-  // The routines don't exist in iOS. There are alternatives, but a good
-  // solution would have to figure out a reasonable path and might be
-  // better as a post to url
+	// The routines don't exist in iOS. There are alternatives, but a good
+	// solution would have to figure out a reasonable path and might be
+	// better as a post to url
 
-  if (nil != captureToFilename) 
-	  {
-	  CGImageRef	image		 =  [ZXCGImageLuminanceSource createImageFromBuffer:videoFrame];
-	  NSURL*		url			 = [NSURL fileURLWithPath:captureToFilename];
-	  CGImageDestinationRef dest =  CGImageDestinationCreateWithURL((CFURLRef)url, kUTTypePNG, 1, nil);
-	  
-	  CGImageDestinationAddImage(dest, image, nil);
-	  CGImageDestinationFinalize(dest);
-	  CGImageRelease(image);
-	  CFRelease(dest);
-	  self.captureToFilename = nil;
-	  }
+	if (nil != captureToFilename) 
+		{
+		CGImageRef	image		   =  [ZXCGImageLuminanceSource createImageFromBuffer:videoFrame];
+		NSURL*		url			   = [NSURL fileURLWithPath:captureToFilename];
+		CGImageDestinationRef dest =  CGImageDestinationCreateWithURL((CFURLRef)url, kUTTypePNG, 1, nil);
+
+		CGImageDestinationAddImage(dest, image, nil);
+		CGImageDestinationFinalize(dest);
+		CGImageRelease(image);
+		CFRelease(dest);
+		self.captureToFilename = nil;
+		}
 	#endif
-
+	
   ZXCGImageLuminanceSource* source = [[[ZXCGImageLuminanceSource alloc] initWithBuffer:videoFrame] autorelease];
 
   if (nil != luminanceLayer) 
@@ -771,7 +768,7 @@
 						CGImageRelease(image);
 						});
 	  }
-
+	
   if ((nil != binaryLayer) || (nil != captureDelegate)) 
 	  {
 	  // compiler issue?
@@ -816,7 +813,7 @@
 			}
 		// NSLog(@"finished frame");
 		}
-
+	
 	[pool drain];
 	}
 
