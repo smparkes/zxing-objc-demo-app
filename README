@@ -19,8 +19,5 @@ The ZXingApp project builds ZXingMac.app which, as a standalone app, contains th
 
 NOTE: A weblink for a simple and clear explanation about how to accomplish the "built-in Framework" functionality in your MacOS application: http://www.dribin.org/dave/blog/archives/2009/11/15/rpath/ 
 
-KNOWN ISSUES: 
-It is possible that some of the controls, such as popup menu and checkboxes, in the main window will not be re-drawn when the course of the video feed to the ZXing engine is changed.  Clicking in the area of the controls can cause them to be drawn.  This is a bug which will be eliminated.
-
 # ===============================================
 # eof
