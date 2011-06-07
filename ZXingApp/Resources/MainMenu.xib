@@ -365,8 +365,8 @@
 				<string key="NSWindowTitle"/>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
-				<string key="NSWindowContentMaxSize">{800, 560}</string>
-				<string key="NSWindowContentMinSize">{800, 560}</string>
+				<string key="NSWindowContentMaxSize">{823, 584}</string>
+				<string key="NSWindowContentMinSize">{823, 584}</string>
 				<object class="NSView" key="NSWindowView" id="439893737">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">4108</int>
@@ -388,7 +388,7 @@
 											<string key="NSFrame">{{18, 14}, {480, 324}}</string>
 											<reference key="NSSuperview" ref="972731673"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="108448153"/>
+											<reference key="NSNextKeyView" ref="1051785900"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 										</object>
 									</object>
@@ -568,7 +568,7 @@
 											<string key="NSFrame">{{4, 7}, {225, 150}}</string>
 											<reference key="NSSuperview" ref="393814671"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="174426524"/>
+											<reference key="NSNextKeyView" ref="583723298"/>
 											<int key="NSViewLayerContentsRedrawPolicy">2</int>
 										</object>
 									</object>
@@ -608,7 +608,7 @@
 							<string key="NSFrame">{{27, 137}, {266, 26}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="1017995394"/>
+							<reference key="NSNextKeyView" ref="174426524"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPopUpButtonCell" key="NSCell" id="688575148">
@@ -711,7 +711,7 @@
 							<string key="NSFrame">{{430, 142}, {126, 18}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="583723298"/>
+							<reference key="NSNextKeyView" ref="1017995394"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="757082646">
@@ -798,6 +798,7 @@
 							<string key="NSFrame">{{136, 544}, {318, 48}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="108448153"/>
 							<int key="NSViewLayerContentsRedrawPolicy">2</int>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSImageCell" key="NSCell" id="316403229">
@@ -823,8 +824,8 @@
 					<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1920, 1178}}</string>
-				<string key="NSMinSize">{800, 582}</string>
-				<string key="NSMaxSize">{800, 582}</string>
+				<string key="NSMinSize">{823, 606}</string>
+				<string key="NSMaxSize">{823, 606}</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
