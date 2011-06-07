@@ -19,5 +19,7 @@ The ZXingApp project builds ZXingMac.app which, as a standalone app, contains th
 
 NOTE: A weblink for a simple and clear explanation about how to accomplish the "built-in Framework" functionality in your MacOS application: http://www.dribin.org/dave/blog/archives/2009/11/15/rpath/ 
 
+KNOWN ISSUE:  It is possible that some of the 'controls' in the window are not redrawn after the video source is changed or re-selected.  This WILL be fixed and removed as a problem. 
+
 # ===============================================
 # eof
